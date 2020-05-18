@@ -15,7 +15,7 @@ class Provider extends AbstractProvider
     protected function getAuthUrl($state)
     {
         return $this->buildAuthUrlFromBase(
-            'https://mediacube.id/oauth/authorize',
+            'https://id.mediacube.dev/oauth/authorize',
             $state
         );
     }
@@ -25,7 +25,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return 'https://mediacube.id/oauth/token';
+        return 'https://id.mediacube.dev/oauth/token';
     }
 
     /**
@@ -43,7 +43,7 @@ class Provider extends AbstractProvider
         ];
 
         $response = $this->getHttpClient()->get(
-            'https://mediacube.id/oauth/user',
+            'https://id.mediacube.dev/oauth/user',
             [
                 'headers' => $requestHeaders,
             ]
